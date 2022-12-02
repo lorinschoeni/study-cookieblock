@@ -11,14 +11,14 @@
 </head>
 
 <body>
-The experiment is over!
+The experiment is starting!
 </body>
 </html>
 
 <script>
 window.onload = function() {
-    setTimeout(function () {
-        openpagewithid(); // send people somewhere with their participant ID
-    }, 5000);
+    saveid(); // get participant ID
+    window.location.replace("index"); // then move to index
 }
 </script>
+

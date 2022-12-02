@@ -61,6 +61,18 @@ function logoutaction(){
 }
 
 
+///
+/// ID people
+///
+function saveid(){
+    localStorage.setItem("part_id", window.location.search);
+}
+function openpagewithid(){
+    let x = localStorage.getItem("part_id");
+    window.location.replace("https://www.exampleshopb.com" + x);
+}
+
+
 // html files loading // php too hard
 $(function () {
     var includes = $('[data-include]')
@@ -69,7 +81,6 @@ $(function () {
         $(this).load(file)
     })
 })
-
 
 
 // Execute on pageload
