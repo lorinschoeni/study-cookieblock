@@ -68,8 +68,9 @@ function saveid(){
     localStorage.setItem("part_id", window.location.search);
 }
 function openpagewithid(){
-    let x = localStorage.getItem("part_id");
-    window.location.replace("https://www.exampleshopb.com" + x);
+    let x = localStorage.getItem("part_id").slice(1); // slice from first index on to remove "?"
+    //window.location.replace("https://www.exampleshopb.com" + x); Not necessary since we now pass on full url + paramater from initial landing parameter
+    window.location.replace(x);
 }
 
 
