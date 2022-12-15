@@ -83,8 +83,19 @@
   }
 
 
+  .center-cropped { /* To crop and center images */
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 100px;
+    width: 100px;
+  }
 
-
+  .center-cropped-large { /* To crop, scale, and center images */
+    object-fit: scale-down; /* If we want any specific scaling */ 
+    object-position: center; /* Center the image within the element */
+    height: 600px;
+    width: 1000px;
+  }
 
 .default-row-spacer{
   margin-bottom: 10px;

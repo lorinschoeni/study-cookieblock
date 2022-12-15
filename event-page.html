@@ -255,7 +255,6 @@ function foo(){
 <!-- When loading the page, execute this function: -->
 <body onload="foo()"></body>
 
-
 <script>
 function loginaction() {
     var input_un = document.getElementById("input_username").value;
@@ -271,22 +270,15 @@ function loginaction() {
             document.getElementById('wrongpw').style.display='block'
         }
     }
+function logoutaction(){
+    setCookie('login', 'no', 1)
+    location.reload();
+}
+function errorbuy(){ // Wrong event
+    alert("This is not the correct event.");
+    return false;
+}
 </script>
-
-<script>
-    function logoutaction(){
-        setCookie('login', 'no', 1)
-        location.reload();
-    }
-    function errorbuy(){ // Wrong event
-        alert("This is not the correct event.");
-        return false;
-    }
-</script>
-
-
-
-
 
 <body>
     <!-- Page Loader -->
@@ -303,9 +295,6 @@ function loginaction() {
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link nav-link-1 active" aria-current="page" href="index.html">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="media.html">Media</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-3" href="about.html">About</a>
