@@ -193,8 +193,8 @@
 <script>
 function logincheck(){
     if (getCookie("loginperm") == "yes"){
-        document.getElementById("input_username").value ="a"
-        document.getElementById("input_password").value ="b"
+        document.getElementById("input_username").value ="Alex"
+        document.getElementById("input_password").value ="LXGbL7b"
     }
 }
 
@@ -227,7 +227,7 @@ btn.onclick = function() {
     function loginaction() {
         var input_un = document.getElementById("input_username").value;
         var input_pw = document.getElementById("input_password").value;
-            if (input_un == "a" && input_pw == "b"){
+            if (input_un == "Alex" && input_pw == "LXGbL7"){
                 settempCookie('login', 'yes')
                 if (document.getElementById('checkbox').checked) {
                     setCookie('login', 'yes', 1)
